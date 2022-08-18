@@ -17,18 +17,17 @@ ind_eq_weighted = industry_port_daily[1]
 
 ind_mc_weighted = industry_port_daily[0]
 
-#print(ind_eq_weighted)
+print(ind_eq_weighted)
 
 #Question 2
 eq_log_returns = np.log1p(ind_eq_weighted/100.0)
-#np.log1p = log(1+input)
-#print(eq_log_returns.head())
+print(eq_log_returns.head())
 
 #Question 3
 mu = np.mean(eq_log_returns.values, axis=0)
 cov_mat = np.cov(eq_log_returns.values.T)
-#print(mu)
-#print(cov_mat)
+print(mu)
+print(cov_mat)
 
 #Question 4
 mu_1 = mu*12
