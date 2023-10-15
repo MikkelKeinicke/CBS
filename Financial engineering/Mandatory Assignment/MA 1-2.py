@@ -9,10 +9,10 @@ np.set_printoptions(precision=4)
 # Drawing data
 maturity = np.array([30, 61, 93, 183, 365])
 df_strike = np.array(
-    pd.read_excel(r'C:\Users\Mikke\OneDrive\CBS - FIN\FINANCIAL ENGINEERING\ASSIGNMENTS\MA\SX5E_options.xlsx',
+    pd.read_excel(r'C:\Users\Mikkel\OneDrive\CBS - FIN\FINANCIAL ENGINEERING\ASSIGNMENTS\MA\SX5E_options.xlsx',
                   sheet_name='options', usecols='B:F', skiprows=2, nrows=13, names=maturity))
 df_price = np.array(
-    pd.read_excel(r'C:\Users\Mikke\OneDrive\CBS - FIN\FINANCIAL ENGINEERING\ASSIGNMENTS\MA\SX5E_options.xlsx',
+    pd.read_excel(r'C:\Users\Mikkel\OneDrive\CBS - FIN\FINANCIAL ENGINEERING\ASSIGNMENTS\MA\SX5E_options.xlsx',
                   sheet_name='options', usecols='B:F', skiprows=16, nrows=13, names=maturity))
 
 # Defining variables:

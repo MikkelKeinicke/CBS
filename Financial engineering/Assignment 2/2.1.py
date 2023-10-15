@@ -51,7 +51,9 @@ logret = np.arange(-0.5, 0.5, 0.01) #points at which log-return distribution is 
 densityL = norm((r-delta-1/2*sigmaL**2)*T,(sigmaL*sqrt(T))).pdf(logret)
 densityH = norm((r-delta-1/2*sigmaH**2)*T,(sigmaH*sqrt(T))).pdf(logret)
 pdfSV = 0.5*densityL + 0.5*densityH  ##the PDF of stochastic vol
+
 pdf_constVol = norm((r-delta-1/2*sigmaBS**2)*T, sigmaBS*sqrt(T)).pdf(logret)
+
 plt.plot(logret, pdfSV)
 plt.plot(logret,pdf_constVol)
 plt.legend(["stoch. vol", "constant vol"], loc="upper right")

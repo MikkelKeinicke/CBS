@@ -46,6 +46,8 @@ for n in range(N):  # one strike at a time
         sigma0 = 0.50  # initial guess
         IV[m,n] = BSM_IV(S, K, delta, r, sigma0, tau, optionType, P[m,n], 0.00001, 1000, "N")
 
+print("HER", P)
+
 x = mness.reshape((len(mness), 1))
 plt.plot(x, IV)
 plt.plot(x, sigma_const*np.ones([M,1]))
